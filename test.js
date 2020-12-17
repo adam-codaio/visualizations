@@ -1,0 +1,3 @@
+const definition = {
+  type: 'test',
+};
