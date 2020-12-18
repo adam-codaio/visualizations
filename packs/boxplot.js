@@ -3,8 +3,6 @@ const definition = {
   name: 'Box Plot',
   dataStructureType: 'Numeric',
   fn: (d3, node, data, width, height) => {
-    data = data.map(([x, y]) => ({x, y}));
-
     const margin = {top: 20, right: 20, bottom: 30, left: 40};
     const n = width / 40;
 
