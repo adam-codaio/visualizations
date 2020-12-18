@@ -49,21 +49,21 @@ const boxplot = {
         .call(d3.axisBottom(x).ticks(n).tickSizeOuter(0))
     }
 
-  const svg = d3.select(node);
+    const svg = d3.select(node);
 
-  const g = svg.append("g")
-    .selectAll("g")
-    .data(bins)
-    .join("g");
+    const g = svg.append("g")
+      .selectAll("g")
+      .data(bins)
+      .join("g");
 
-  g.append("path")
+    g.append("path")
       .attr("stroke", "currentColor")
       .attr("d", d => `
         M${x((d.x0 + d.x1) / 2)},${y(d.range[1])}
         V${y(d.range[0])}
       `);
 
-  g.append("path")
+    g.append("path")
       .attr("fill", "#ddd")
       .attr("d", d => `
         M${x(d.x0) + 1},${y(d.quartiles[2])}
@@ -73,7 +73,7 @@ const boxplot = {
         Z
       `);
 
-  g.append("path")
+    g.append("path")
       .attr("stroke", "currentColor")
       .attr("stroke-width", 2)
       .attr("d", d => `
@@ -81,7 +81,7 @@ const boxplot = {
         H${x(d.x1)}
       `);
 
-  g.append("g")
+    g.append("g")
       .attr("fill", "currentColor")
       .attr("fill-opacity", 0.2)
       .attr("stroke", "none")
@@ -93,10 +93,10 @@ const boxplot = {
       .attr("cx", () => (Math.random() - 0.5) * 4)
       .attr("cy", d => y(d.y));
 
-  svg.append("g")
+    svg.append("g")
       .call(xAxis);
 
-  svg.append("g")
+    svg.append("g")
       .call(yAxis);
   }
 };
