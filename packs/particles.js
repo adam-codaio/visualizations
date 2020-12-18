@@ -1,4 +1,3 @@
-// Based on https://bl.ocks.org/mbostock/9539958
 const definition = {
   type: 'circle-particles',
   name: 'Circle Particles',
