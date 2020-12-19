@@ -12,4 +12,4 @@ fs.readdirSync(packsPath).forEach(function(pack) {
   definitions.push(def.replace('definition', packName));
 });
 
-fs.writeFileSync('packs.js', `${definitions.join("\n")}\nconst definitions = [${names.join(',')}];`);
+fs.writeFileSync('dist/packs.js', `${definitions.join("\n")}\nconst definitions = [${names.join(',')}];`);
